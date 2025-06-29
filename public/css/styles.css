@@ -1,0 +1,33 @@
+
+body {
+  background-color: rgb(125, 178, 238);
+}
+
+.centered {
+    padding-top: 200px;
+    text-align: center;
+}
+
+.secret-text {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #000;
+}
+/* Base styles */
+
+/* Center the content vertically */
+/* Styling for the submit page without breaking structure */
+
+.bounce {
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
