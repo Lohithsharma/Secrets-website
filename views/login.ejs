@@ -1,42 +1,53 @@
 <%- include('partials/header') %>
 
-  <div class="container mt-5">
-    <h1>Login</h1>
+<div class="container mt-5">
+  <h1 class="mb-4">Login</h1>
 
-    <div class="row">
-      <div class="col-sm-8">
-        <div class="card">
-          <div class="card-body">
+  <div class="row">
+    <!-- Email/Password Login -->
+    <div class="col-md-8 mb-4">
+      <div class="card">
+        <div class="card-body">
+          <form action="/login" method="POST">
+            <div class="form-group mb-3">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                name="username"
+                id="email"
+                required
+              >
+            </div>
 
-            <!-- Makes POST request to /login route -->
-            <form action="/login" method="POST">
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" name="username">
-              </div>
-              <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" name="password">
-              </div>
-              <button type="submit" class="btn btn-dark">Login</button>
-            </form>
+            <div class="form-group mb-4">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                name="password"
+                id="password"
+                required
+              >
+            </div>
 
-          </div>
+            <button type="submit" class="btn btn-dark w-100">Login</button>
+          </form>
         </div>
       </div>
+    </div>
 
-      <div class="col-sm-4">
-        <div class="card">
-          <div class="card-body">
-            <a class="btn btn-block" href="/auth/google" role="button">
-              <i class="fab fa-google"></i>
-              Sign In with Google
-            </a>
-          </div>
+    <!-- Google Login -->
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-body d-flex align-items-center justify-content-center">
+          <a class="btn btn-outline-danger w-100" href="/auth/google">
+            <i class="fab fa-google me-2"></i> Sign in with Google
+          </a>
         </div>
       </div>
-
     </div>
   </div>
+</div>
 
-  <%- include('partials/footer') %>
+<%- include('partials/footer') %>
